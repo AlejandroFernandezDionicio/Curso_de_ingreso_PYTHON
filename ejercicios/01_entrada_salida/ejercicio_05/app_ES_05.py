@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre:Alejandro Melnic
+apellido:Fernandez Dionicio
 ---
 Ejercicio: entrada_salida_05
 ---
@@ -41,6 +41,12 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        cero = self.txt_nombre.get()
+        uno = self.txt_edad.get()
+        saludo = "Usted se llama {0} y su edad es {1} años".format(cero,uno)
+        alert(title = "EJ 03",message = saludo)
+        
+    
         pass
 
 
