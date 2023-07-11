@@ -38,15 +38,14 @@ class App(customtkinter.CTk):
         texto_edad = self.txt_edad.get()
         numero_edad = int(texto_edad)
 
-        if(numero_edad >= 18):
-            alert(title = "EJ 03", message = "MAYOR")
-        
-        elif(numero_edad <= 17):
-            alert(title = "EJ 03", message = "MENOR")
-        pass
+        if numero_edad >= 18:
+            mensaje = "MAYOR"
 
+        else:
+             mensaje = "MENOR"
         
-        
+        alert(title = "EJ 03", message = mensaje)    
+
     
 if __name__ == "__main__":
     app = App()

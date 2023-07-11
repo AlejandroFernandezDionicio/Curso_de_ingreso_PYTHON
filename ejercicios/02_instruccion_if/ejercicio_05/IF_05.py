@@ -37,9 +37,9 @@ class App(customtkinter.CTk):
         texto_edad = self.txt_edad.get()
         numero_edad = int(texto_edad)
 
-        if(numero_edad <= 12 or numero_edad >= 18):
-            alert(title = "EJ 05",message = "NO ES ADOLECENTE")
-        pass
+        if numero_edad <= 12 or numero_edad >= 18:
+            alert(title = "EJ 05", message = "NO ES ADOLECENTE")
+        
 
         
         

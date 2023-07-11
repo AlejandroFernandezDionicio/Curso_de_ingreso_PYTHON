@@ -7,8 +7,8 @@ import random
 
 
 '''
-nombre:
-apellido:
+nombre:Alejandro Melnic
+apellido:Fernandez Dionicio
 ---
 Ejercicio: instrucion_if_10
 ---
@@ -33,7 +33,21 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass  
+        numero_ramdom = random.randrange(0,11)
+
+        if numero_ramdom >= 6 and numero_ramdom <= 10:
+            mensaje = "Promoción directa, la nota es {0}".format(numero_ramdom)
+
+        elif numero_ramdom >= 4 and numero_ramdom <= 5:
+            mensaje = "Aprobado, la nota es {0}".format(numero_ramdom)
+
+        elif numero_ramdom >= 1 and numero_ramdom <= 3:
+            mensaje = "Desaprobado, la nota es {0}".format(numero_ramdom)
+
+        alert(title = "EJ 10", message = mensaje)
+
+
+        
             
 
 if __name__ == "__main__":

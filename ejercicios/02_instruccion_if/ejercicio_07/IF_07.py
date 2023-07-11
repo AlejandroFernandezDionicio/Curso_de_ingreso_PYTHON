@@ -46,12 +46,22 @@ class App(customtkinter.CTk):
         texto_edad = self.txt_edad.get()
         numero_edad = int(texto_edad)
 
+        natividad = self.combobox_tipo.get()
         
+        if natividad == "NATIVO" and numero_edad >= 16:
+            mensaje = "Puede votar"
 
-        pass
-        
-        
-    
+        elif natividad == "NATIVO" and numero_edad <= 16:
+            mensaje = "No puede votar"    
+
+        elif natividad == "NATURALIZADO" and numero_edad >= 18:
+            mensaje = "Puede votar"
+
+        elif natividad == "NATURALIZADO" and numero_edad <= 18:
+            mensaje = "No puede votar"    
+
+        alert(title = "EJ 07", message = mensaje)
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
