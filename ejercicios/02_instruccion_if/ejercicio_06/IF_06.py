@@ -39,16 +39,16 @@ class App(customtkinter.CTk):
         texto_edad = self.txt_edad.get()
         numero_edad = int(texto_edad)
 
-        if numero_edad >= 18:
-           mensaje = "Usted es mayor"
+        if numero_edad >= 18:#18 o mas
+            mensaje = "Usted es mayor"
             
-        elif numero_edad > 13 and numero_edad <= 17:
+        elif numero_edad > 13 and numero_edad <= 17:#17 menos
             mensaje = "Usted es un adolecente"
 
-        elif numero_edad >= 10 and numero_edad <= 13:
+        elif numero_edad >= 10 and numero_edad <= 13:#12 menos
             mensaje = "Usted es un pre-adolecente"
 
-        elif numero_edad < 10:
+        elif numero_edad < 10:#else
             mensaje = "Usted es un niño/a"
             
         alert(title = "EJ 06", message = mensaje)

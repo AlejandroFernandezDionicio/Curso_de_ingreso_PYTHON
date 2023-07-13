@@ -41,7 +41,7 @@ class App(customtkinter.CTk):
         elif numero_ramdom >= 4 and numero_ramdom <= 5:
             mensaje = "Aprobado, la nota es {0}".format(numero_ramdom)
 
-        elif numero_ramdom >= 1 and numero_ramdom <= 3:
+        else:
             mensaje = "Desaprobado, la nota es {0}".format(numero_ramdom)
 
         alert(title = "EJ 10", message = mensaje)
